@@ -1,5 +1,11 @@
 # eMPTI experiment code
 
+## Dependencies
+We require browsertime. Install:
+
+```
+npm install browsertime
+```
 
 ## Notes
 - By default browsertime results will save in a `browsertime-results` directory. Be sure to move the results from a relay or non-relay run into their own respective directories once complete, e.g.:
