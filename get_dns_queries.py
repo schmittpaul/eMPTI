@@ -107,4 +107,4 @@ alldomains.update(norelaydomains)
 
 print(len(relaydomains), len(norelaydomains), len(alldomains))
 with open('domain_set.pickle', 'wb') as handle:
-  pickle.dump(alldomains, handle, protocol=pickle.HIGHEST_PROTOCOL)
+  pickle.dump(alldomains, handle, protocol=pickle.DEFAULT_PROTOCOL)
