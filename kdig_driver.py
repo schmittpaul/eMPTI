@@ -8,7 +8,11 @@ with open('domain_set.pickle', 'rb') as handle:
 
 for domain in tqdm(domains):
   cmd = subprocess.Popen(
-      'kdig -d @149.248.212.154 +tls-host=35.244.200.159 '
+      'kdig -d @149.248.212.154 +tls-host=35.244.200.159 '  # no relay
+      # 'kdig -d @35.244.200.159 +tls-host=35.244.200.159 ' # relay
+      # 'kdig -d @8.8.8.8 +tls-host=8.8.8.8 ' # google
+      # 'kdig -d @1.1.1.1 +tls-host=1.1.1.1 ' # cf
+      # 'kdig -d @9.9.9.9 +tls-host=9.9.9.9 ' # q9
       +  #CHANGE TO WHATEVER IS NEEDED 149.248.212.154
       domain,
       shell=True,
