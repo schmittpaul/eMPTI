@@ -6,33 +6,13 @@ import argparse
 import os
 import pickle
 from matplotlib import pyplot as plt
-# from matplotlib import rc
-import numpy as np
-# from cycler import cycler
 import plotting
-
-# # Set fonts to Helvetica
-# rc('font', **{'family': 'sans-serif', 'sans-serif': ['Helvetica']})
-# # Avoid type 3 fonts
-# matplotlib.rcParams['pdf.fonttype'] = 42
-# matplotlib.rcParams['ps.fonttype'] = 42
-
-# # A colorblind-safe palette and linestyle cycler
-# line_cycler = (cycler(color=[
-#     "#E69F00", "#56B4E9", "#009E73", "#0072B2", "#CC79A7", "#D55E00", "#F0E442"
-# ]) + cycler(linestyle=["-", "--", "-.", ":", "-", "--", "-."]))
-
-# plt.rc('axes', prop_cycle=line_cycler)
 
 relay = []
 norelay = []
 google = []
 cf = []
 q9 = []
-
-# def cdf(x, plot=True, *args, **kwargs):
-#   x, y = sorted(x), np.arange(len(x)) / len(x)
-#   return plt.plot(x, y, *args, **kwargs) if plot else (x, y)
 
 
 def main():
@@ -81,7 +61,7 @@ def main():
   plotting.cdf(cf, label="Cloudflare")
   plotting.cdf(q9, label="Quad9")
 
-  plt.xlim(0, 1700)
+  plt.xlim(50, 1700)
   plt.yticks([0, .25, .5, .75, 1])
   plt.xscale('symlog')
   plt.xlabel('DNS resolution time (ms)')
