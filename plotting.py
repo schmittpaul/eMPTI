@@ -11,11 +11,11 @@ from cycler import cycler
 rc('font', **{
     'family': 'sans-serif',
     'sans-serif': ['Helvetica'],
-    'size': '10'
+    'size': '7'
 })
 
 # Set sane defaults
-rc('figure', **{'figsize': ['3.64', '2.5']})
+rc('figure', **{'figsize': ['3.64', '3.5']})
 rc('legend', **{'fontsize': '8', 'fancybox': 'True'})
 rc('axes', **{'linewidth': '0.5'})
 rc('patch', **{'linewidth': '0.5'})
@@ -39,3 +39,12 @@ plt.rc('axes', prop_cycle=line_cycler)
 def cdf(x, plot=True, *args, **kwargs):
   x, y = sorted(x), np.arange(len(x)) / len(x)
   return plt.plot(x, y, *args, **kwargs) if plot else (x, y)
+
+def curve(x, y, m, plot=True, *args, **kwargs):
+  return plt.plot(x, y, m, *args, **kwargs) if plot else (x, y)
+
+def bar(x, y, plot=True, *args, **kwargs):
+  if plot:
+    res = plt.bar(x, y, *args, **kwargs)
+    return res
+  return (x, y)

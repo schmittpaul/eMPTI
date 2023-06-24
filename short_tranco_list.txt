@@ -1,0 +1,10 @@
+https://google.com
+https://youtube.com
+https://facebook.com
+https://microsoft.com
+https://twitter.com
+https://netflix.com
+https://instagram.com
+https://baidu.com
+https://cloudflare.com
+https://apple.com
